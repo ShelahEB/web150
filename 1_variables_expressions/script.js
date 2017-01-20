@@ -14,8 +14,3 @@
 //goal.
     var goal = "work as a Web Designer";
 
-
-//message
-document.write("My Name is " + firstName + " " + lastName + "<br> <br>");
-document.write("I have been in SCC for " + yearOfStudy + "<br> <br>" );
-document.write("I plan to " + goal + "after completing my courses");
