@@ -9,24 +9,30 @@
 <body>
 
     <script type="text/javascript">
-        //prompt for word
-        var word = prompt("Input a word to translate", '');
-
-        //var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+        //Ask for input
+        var word = prompt('Enter word:', "");
+        
+        //vowels
         var vowels = /[aeiouAEIOU]/gi;
         
-        //assigns prompt as myWord
-        var myWord = word;
+        var myWord = word;//given word to myWord
         
-        //slices/ takes off the 1st letter & puts the last letter to the end of word
-        var newString = myWord.substring(1) + myWord.substring(0, 1);
+        //moves the 1st letter of word to last
+        var newString = myWord.substring(1) + myWord.substring(0,1);
 
-        
-        
-        
-        //checks if 1st letter is a vowel
-        if (myWord[0].match((vowels))) {
+
+        // alert to enter a word if no input
+        if (word != null) {
+            alert("Please enter a word");
+            
+        //checks if 1st letter is a vowel, puts 1st letter-> last + ay    
+        } else if (myWord[0].match((vowels))) {
             alert(newString + "-ay" + ' ');
+            
+        
+        //Switches 1st letter to last    
+        }else  if (word.indexOf(0) == vowels) {
+            alert(newString + "ay");
         }
     </script>
 </body>
