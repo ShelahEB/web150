@@ -1,3 +1,52 @@
+
+
+
+
+
+
+
+<!--WORKS: March 6 | 7am-->
+
+        var grades = " jim 25, sue 32, mary 34, ann 22, ted 28, frank 15, lisa 19, mike 30, ahn 26, vishaya 27";
+
+//List the content of array
+        document.write('<br><br>' + '<strong>In the array</strong><br>');
+
+        var profile = grades.split(',');
+        document.write(profile);
+
+        //Alphabetizes the array
+        document.write('<br><br>' + '<strong>Alphabetical order of students:</strong><br>');
+        document.write(profile.sort());
+
+        //added "ENTER" verticalize
+        document.write('<br><br>' + '<strong>Veritcal:</strong><br>');
+        var vertical = profile.join("<br>");
+        document.write(vertical);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <! DOCTYPE html>
 
 <html>
@@ -290,6 +339,39 @@ alert(newString + "ay");
 
 
 var newStr = prompt("Enter word"); // if string starts with vowel make 'way' adjustment if (newStr.slice(0,1).match(/[aeiouAEIOU]/)) { alert(newStr = newStr + "way") ; } // else, iterate through first consonents to find end of cluster // move consonant cluster to end, and add 'ay' adjustment else { (newStr.slice(0,1).match(/[^aeiouAEIOU]/)) { moveLetters += newStr.slice(0,1); newStr = newStr.slice(1, newStr.length); } newStr = newStr + moveLetters + "sssy"; } var word = prompt("Input a word to translate", ''); //var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']; //slices/ takes off the 1st letter //puts the last letter to the end of word //var myString ="apple"; var myWord = word; var newString = myWord.substring(1) + myWord.substring(0,1); if (){ alert(newString + "ay"); } if (.indexOf(veggie) === -1) { veggies.push(veggie); console.log('New veggies collection is : ' + veggies); } else if (veggies.indexOf(veggie) > -1) { console.log(veggie + ' already exists in the veggies collection.'); }
+
+
+
+
+    <!--THIS WORKS-->
+
+    //shows the seperated student|grade
+document.write('<strong>Student | Grade</strong>' + '<br>' + profile);
+
+//Counts # of students
+document.write('<br>' + '<br>' + '<strong># of students:</strong> ' + profile.length);
+
+//Alphabetical order of the array
+document.write('<br><br>' + '<strong>Alphabetical order of students:</strong><br>' + profile.sort());
+
+//
+
+
+
+            var grades = "jim 25, sue 32, mary 34, ann 22, ted 28, frank 15, lisa 19, mike 30, ahn 26, vishaya 27";
+
+        var profile = grades.split(",");
+        document.write(profile);
+
+        //list # of students
+        document.write('<br>' + '<br>' + '<strong># of students:</strong> ' + profile.length);
+
+        //Alphabetizes the array
+        document.write('<br><br>' + '<strong>Alphabetical order of students:</strong><br>' + profile.sort());
+
+        //added "ENTER"
+var names = students.join("<br>");
+document.write(names);
 
 
 </html>
