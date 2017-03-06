@@ -1,4 +1,30 @@
 
+<!--WORKS | MARCH 6  | 7:37-->
+        var grades = " jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
+
+        //List the content of array
+        document.write('<br><br>' + '<strong>In the array</strong><br>');
+
+        var profile = grades.split(',');
+        document.write(profile);
+
+         document.write('<br><br>' + '<strong>All stringed</strong><br>');
+        var proof = grades.split('|');
+        document.write(proof);
+
+        //Alphabetizes the array
+        //  document.write('<br><br>' + '<strong>Alphabetical order of students:</strong><br>');
+        console.log(profile.sort()); //hides it but still retain property
+
+        //added "ENTER" verticalize
+        document.write('<br><br>' + '<strong>Vertcal:</strong><br>');
+        var vertical = profile.join("<br>");
+        document.write(vertical);
+
+        document.write('<br><br>');
+
+var vertical2 = vertical.split('|');
+        document.write(vertical2);
 
 
 
