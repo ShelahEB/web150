@@ -1,0 +1,67 @@
+<!--Old Version-->
+        var grades = " jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
+
+        //List the content of array
+        document.write('<br><br>' + '<strong>In the array</strong><br>');
+
+        var profile = grades.split(',');
+        document.write(profile);
+
+         document.write('<br><br>' + '<strong>All stringed</strong><br>');
+        var proof = grades.split('|');
+        document.write(proof);
+
+        //Alphabetizes the array
+        //  document.write('<br><br>' + '<strong>Alphabetical order of students:</strong><br>');
+        console.log(profile.sort()); //hides it but still retain property
+
+        //added "ENTER" verticalize
+        document.write('<br><br>' + '<strong>Vertcal:</strong><br>');
+        var vertical = profile.join("<br>");
+        document.write(vertical);
+
+        document.write('<br><br>');
+
+var vertical2 = vertical.split('|');
+        document.write(vertical2);
+
+<!--Version 0.0.1 | 3-7-17 1:50am-->
+
+var grades = "jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
+    grades = grades.split(",");
+    for(i = 0; i<grades.length; i++){
+      grades[i]= grades[i].trim();
+    }
+grades = grades.sort();
+    var print="";
+    var score=[];
+    for(i = 0; i<grades.length; i++){
+    grades[i]= grades[i].charAt(0).toUpperCase()+grades[i].slice(1);
+    grades[i]= grades[i].split("|");
+    score[i]=parseInt(grades[i][1]);
+    grades[i]= grades[i].join(" - ");
+    print+=grades[i]+"<br>";
+
+    }
+    document.write(print);
+    document.write("number of students: " + grades.length + "<br>");
+    var totalScore=0;
+    for(i = 0; i<score.length; i++){
+    totalScore+=score[i];
+    }
+    var average = totalScore/grades.length;
+    document.write("average score: " + average + "<br>");
+    var highest=0;
+    for(i = 0; i<score.length; i++){
+    if(score[i] >highest){
+    highest=score[i];
+    }
+    }
+    document.write("highest score: " + highest + "<br>");
+    var lowest=100;
+    for(i = 0; i<score.length; i++){
+    if(score[i] <lowest){
+    lowest=score[i];
+    }
+    }
+    document.write("lowest score: " + lowest + "<br>");
