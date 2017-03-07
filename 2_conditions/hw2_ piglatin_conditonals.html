@@ -24,6 +24,10 @@
         //checks if there is a word, ERROR if empty
         if (word === '' || word === false) {
             alert("Please enter a word to translate:");
+        
+        //For VOWELS and 'way' in the end 
+        } else if (myWord[0].match((vowels))) {
+            alert(myWord + "way" + 'started w. vowel');
     </script>
 </body>
 
