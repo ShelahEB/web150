@@ -1,0 +1,50 @@
+<! DOCTYPE html>
+
+<html>
+
+<head>
+    <title> HW 2 | PigLatin | conditionals</title>
+</head>
+<h2>Home Work 2 : Pig Latin</h2>
+    <br></br>
+<h3>Shelah Blando</h3>
+<body>
+
+    <script type="text/javascript">
+        //Ask for input
+        var word = prompt('Enter word:');
+
+        //vowels
+        var vowels = /[aeiouAEIOU]/gi;
+
+        //myWord is variable of input word
+        var myWord = word.toLowerCase('');
+
+        //moves the 1st letter of word to last
+        								//insertion point				//letters removed
+       var newString = myWord.substring(1) + myWord.substring(0, 1);  
+       
+       //gets the first 2 string
+       // var twoString = myWord.substring(2) + myWord.substring(0, 2);
+        
+        //checks if there is a word, ERROR if empty
+        if (word === '' || word === false) {
+            alert("Please enter a word to translate:");
+        
+        //For VOWELS add 'way' in the end 
+        } else if (myWord[0].match((vowels))) {
+            alert(myWord + "way" + 'started w. vowel');
+        
+        //1st letter CONSONANT, move to the end + 'ay'
+        } else if (!myWord[0].match((vowels))) {
+          alert(newString + "ay" + " started w. consonant");
+	 }
+				
+        
+        
+        
+        
+    </script>
+</body>
+
+</html>

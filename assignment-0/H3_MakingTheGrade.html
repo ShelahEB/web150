@@ -1,0 +1,48 @@
+<! DOCTYPE html>
+
+<html>
+
+<head>
+    <title> HW 2 | PigLatin | conditionals</title>
+</head>
+
+<body>
+    <h2>Making the Grade</h2>
+    <h5>HW Prompt:</h5>
+    <ol>
+        <li>Display student name and score in alphabetical order</li>
+        <li>First Letter of student should be capitalized</li>
+        <li>Display lowest, highest and average scores</li>
+    </ol>
+
+    <script>
+        var grades = " jim 25, sue 32, mary 34, ann 22, ted 28, frank 15, lisa 19, mike 30, ahn 26, vishaya 27";
+
+        //List the content of array
+        document.write('<br><br>' + '<strong>In the array</strong><br>');
+
+        var profile = grades.split(',');
+        document.write(profile);
+
+         //Alphabetizes the array
+        document.write('<br><br>' + '<strong>Alphabetical order of students:</strong><br>');
+        document.write(profile.sort());
+
+
+
+        //added "ENTER" verticalize
+        document.write('<br><br>' + '<strong>Veritcal:</strong><br>');
+        var vertical = profile.join("<br>");
+        document.write(vertical);
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
