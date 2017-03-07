@@ -9,7 +9,18 @@
 <body>
 
     <script type="text/javascript">
- 
+         //Ask for input
+        var word = prompt('Enter word:');
+
+        //vowels
+        var vowels = /[aeiouAEIOU]/gi;
+
+        //myWord is variable of input word
+        var myWord = word.toLowerCase('');
+
+        //moves the 1st letter of word to last
+        var newString = myWord.substr(1) + myWord.substr(0, 1);
+
     </script>
 </body>
 
