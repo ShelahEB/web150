@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title> HW 3 | Making the Grade | Array & Loops</title>
+    <title> HW 3 | Making the Grade | Array - Loops</title>
 </head>
 
 <body>
@@ -22,7 +22,6 @@
 
 
     <script>
-
         //given grades
         var grades = " jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
 
@@ -45,6 +44,7 @@
         //total # of students
         document.write("Number of Students: " + totalStudents + br + br);
 
+
         //loop through the array
         for (i = 0; i < gradeProfile.length; i++) {
 
@@ -54,23 +54,20 @@
             //1st letter UPPERCASE -broken
             studentProfile[0] = studentProfile[0].toUpperCase().slice(1);
 
+            //make grade into #'s
+            //  GRADE[i]=parseInt(gradeProfile[i][1]);
+
             //put on html side
             //              //name
             document.write(studentProfile[0] + ". . . . ");
-                            //grades
+            //grades
             document.write(studentProfile[1] + br);
-
-
 
 
 
         }
 
-
-
-
     </script>
-
 
 
 </body>
