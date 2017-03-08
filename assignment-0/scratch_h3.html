@@ -1,0 +1,248 @@
+<html>
+
+
+<head>
+
+
+</head>
+
+<body> //given grades
+        var grades = " jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
+
+        //page break
+        var br = ("<br>");
+
+        //creates string array name| grade
+        var gradeProfile = grades.split(',');
+
+        //sort grades
+        gradeProfile.sort();
+
+        //numebr of students in the array
+        var totalStudents = gradeProfile.length;
+
+        //student name
+        var studentProfile;
+
+
+
+
+        //loop through the array
+        for (i = 0; i < gradeProfile.length; i++) {
+
+            //seperates to name and grade
+            studentProfile = gradeProfile[i].split("|");
+
+            //1st letter UPPERCASE -broken
+            studentProfile[0] = studentProfile[0].toUpperCase().slice(1);
+
+            //make grade into #'s
+            //  GRADE[i]=parseInt(gradeProfile[i][1]);
+
+            //put on html side
+            //              //name
+            document.write(studentProfile[0] + ". . . . ");
+            //grades
+            document.write(studentProfile[1] + br);
+
+
+
+        }
+
+        //move to html side
+        //total # of students
+        document.write(br + "Number of Students: " + totalStudents + br + br);
+
+
+    <script>
+        //given grades
+        var grades = " jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
+
+        //page break
+        var br = ("<br>");
+
+        //creates string array name| grade
+        var gradeProfile = grades.split(',');
+
+        //sort grades
+        gradeProfile.sort();
+
+
+        //numebr of students in the array
+        var totalStudents = gradeProfile.length;
+
+        //student name
+        var studentProfile;
+
+
+
+
+        //loop through the array
+        for (i = 0; i < gradeProfile.length; i++) {
+
+            //seperates to name and grade
+            studentProfile = gradeProfile[i].split("|");
+
+            //1st letter UPPERCASE -broken
+            studentProfile[0] = studentProfile[0].toUpperCase().slice(1);
+
+            //make grade into #'s
+            //  GRADE[i]=parseInt(gradeProfile[i][1]);
+
+            //put on html side
+            //              //name
+            document.write(studentProfile[0] + ". . . . ");
+            //grades
+            document.write(studentProfile[1] + br);
+
+
+
+        }
+
+        //move to html side
+        //total # of students
+        document.write(br + "Number of Students: " + totalStudents + br + br);
+                //loop through the array
+                for (i = 0; i < gradeProfile.length; i++) {
+
+                    //seperates to name and grade
+                    studentProfile = gradeProfile[i].split("|");
+
+                    //turned 'score' into numbers
+                    var studentGrades = parseInt(studentProfile[1]);
+
+                    document.write(studentGrades + "," + " ");
+
+                    totalGrades += studentGrades;
+
+                    if (studentGrades < minGrades ){
+                        minGrades = studentGrades;
+                    }
+                    if (studentGrades > maxGrades) {
+                        maxGrades = studentGrades;
+                    }
+        var totalGrades = 0;
+        var maxGrades = 0;
+        var minGrades= 100;
+        var avgGrades = 0;
+        var studentGrades = 0;
+                }
+
+        document.write(br + br +"Total Grade: " +totalGrades);
+        document.write(br +"Max Grade: " +maxGrades);
+        document.write(br +"Min Grade: " +minGrades);
+             //   totalGrades += studentGrades;
+
+
+
+
+
+
+
+
+        /*
+                //given grades
+                var grades = " jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
+
+                //page break
+                var br = ("<br>");
+
+                //creates string array name| grade
+                var gradeProfile = grades.split(',');
+
+                //sort grades
+                gradeProfile.sort();
+
+                        //student name
+                var studentProfile;
+               // var studentGrades;
+
+
+                //loop through the array
+                for (i = 0; i < gradeProfile.length; i++) {
+
+                    //seperates to name and grade
+                    studentProfile = gradeProfile[i].split("|");
+
+                    //turned 'score' into numbers
+                    var studentGrades = parseInt(studentProfile[1]);
+
+                    document.write(studentGrades + "," + " ");
+
+                    totalGrades += studentGrades;
+
+                    if (studentGrades < minGrades ){
+                        minGrades = studentGrades;
+                    }
+                    if (studentGrades > maxGrades) {
+                        maxGrades = studentGrades;
+                    }
+        var totalGrades = 0;
+        var maxGrades = 0;
+        var minGrades= 100;
+        var avgGrades = 0;
+        var studentGrades = 0;
+                }
+
+        document.write(br + br +"Total Grade: " +totalGrades);
+        document.write(br +"Max Grade: " +maxGrades);
+        document.write(br +"Min Grade: " +minGrades);
+             //   totalGrades += studentGrades;
+
+        */
+
+
+        // var GRADE = studentProfile[1];
+        //
+        //var sum = 0;
+        //var max = 0;
+        //var min = 100;
+        //var score = parseInt(GRADE[1]);
+        //
+        //               //max score
+        //  	if (score > max) {
+        //    	max = score
+        //  	}
+        //
+        //
+        //
+        //        }
+        //document.write (br + "Total Students: " + GRADE + br);
+        //document.write( "Min: " + min + br);
+        //document.write( "Max: " + max + br);
+        //document.write( "Average: " +  average + br);
+        //        // page break
+        //        document.write(br + br);
+        //
+        //
+        //        for (var i = 0; i < GRADE.length; i++) {
+        //            GRADE[i] = parseInt(gradeProfile[i][1]);
+        //            // for ( i = 0; i <GRADE.length; i++)
+        //            sum += GRADE[i];
+        //            //document.write(sum);
+        //
+        //
+        //
+        //            //  var GRADE = studentProfile[1];
+        //            var sum = 0;
+        //            var highest = 0;
+        //            var lowest = 100;
+        //
+        //            /*          sum += Grade[i];
+        //
+        //                      if (Grade[i] > highest) {
+        //                          highest = Grade[i]
+        //                      }
+        //
+        //                      if (Grade[i] < lowest) {
+        //                          lowest = Grade[i];
+        //
+        //
+        //            document.write("This is the sum" + sum + br);
+        //            document.write("Highest score:" + highest + br);
+        //            document.write("Lowest Score:" + lowest + br);
+        //        }*/
+    </script>
+</body>
+
+</html>
