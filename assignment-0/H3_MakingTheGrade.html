@@ -22,13 +22,13 @@
 
 
     <script>
-                        //given grades
+        //given grades
         var grades = " jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
 
         //page break
         var br = ("<br>");
 
-         //creates string array name| grade
+        //creates string array name| grade
         var gradeProfile = grades.split(',');
 
         //sort grades
@@ -58,7 +58,7 @@
 
             //put on html side
             //              //name
-            document.write(studentProfile[0]+ ". . . . ");
+            document.write(studentProfile[0] + ". . . . ");
             //grades
             document.write(studentProfile[1] + br);
 
@@ -71,10 +71,48 @@
         document.write(br + "Number of Students: " + totalStudents + br + br);
 
 
+        ////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////
+        /////////////////////////////////////
+        //////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////
+        var totalGrades = 0;
+        var maxGrades = 0;
+        var minGrades = 100;
+        var avgGrades = 0;
+        var studentGrades = 0;
+
+        //loop through the array
+        for (i = 0; i < gradeProfile.length; i++) {
+
+            //seperates to name and grade
+            studentProfile = gradeProfile[i].split("|");
+
+            //student grades
+            var studentGrades = parseInt(studentProfile[1]);
+
+            document.write(studentGrades + "," + " ");
 
 
 
 
+            totalGrades += studentGrades;
+
+            if (studentGrades < minGrades) {
+                minGrades = studentGrades;
+            }
+            if (studentGrades > maxGrades) {
+                maxGrades = studentGrades;
+            }
+
+
+
+        }
+
+        document.write(br + br + "Total Grade: " + totalGrades);
+        document.write(br + "Max Grade: " + maxGrades);
+        document.write(br + "Min Grade: " + minGrades);
+        //   totalGrades += studentGrades;
     </script>
 
 
