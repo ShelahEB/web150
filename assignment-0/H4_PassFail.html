@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Functions & validation</h1>
+
+    <form id="form1" action="#" onsubmit="return validateForm(this);">
+        first name:
+        <input type="text" name="firstname">
+        <br> last name:
+        <input type="text" name="lastname">
+        <br> password:
+        <input type="text" name="password">
+        <br>
+
+        <button>Check</button>
+    </form>
+
+    <hr>
+    <div id="message"></div>
+
+    <script>
+        //form validation
+        function validateForm(myForm) {
+            var firstname = myForm.firstname.value;
+            var lastname = myForm.lastname.value;
+            var password = myForm.password.value;
+            /* Form validation code goes here
+             */
+            //validate firstname
+            if (firstname == "") {
+                $("#message").html("Error.  Please enter a first name.");
+            //validate last name
+            } else if (lastname == "") {
+                $("#message").html("Error.  Please enter a last name.");
+                //validate password
+            } else if (!validatePassword(password)) {
+
+                return false;
+            } else {
+                $("#message").html("Sucess! this validation form works.");
+            }
+            return false; // prevent page reload
+        }
+        //password validation
+        function validatePassword(myPassword) {
+
+            if (myPassword.length < 8) {
+                $("#message").html("Error.  Please enter a last 8 characters.");
+
+            } else if (myPassword == myPassword.toLowerCase()) {
+                $("#message").html("Error.  Please have at least one lower case letter.");
+
+            } else if (myPassword == myPassword.toUpperCase()) {
+                $("#message").html("Error. Please have at least one upper case letter.");
+            } else {
+                return true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
