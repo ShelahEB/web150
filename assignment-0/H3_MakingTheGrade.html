@@ -15,34 +15,58 @@
         <li>Display lowest, highest and average scores</li>
     </ol>
 
+
+
+    <br>
+    <br>
+
+
     <script>
-        var grades = " jim 25, sue 32, mary 34, ann 22, ted 28, frank 15, lisa 19, mike 30, ahn 26, vishaya 27";
+        //given grades
+        var grades = " jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
 
-        //List the content of array
-        document.write('<br><br>' + '<strong>In the array</strong><br>');
+        //page break
+        var br = ("<br>");
 
-        var profile = grades.split(',');
-        document.write(profile);
+        //creates string array name| grade
+        var gradeProfile = grades.split(',');
 
-         //Alphabetizes the array
-        document.write('<br><br>' + '<strong>Alphabetical order of students:</strong><br>');
-        document.write(profile.sort());
-
-
-
-        //added "ENTER" verticalize
-        document.write('<br><br>' + '<strong>Veritcal:</strong><br>');
-        var vertical = profile.join("<br>");
-        document.write(vertical);
+        //sort grades
+        gradeProfile.sort();
 
 
+        //numebr of students in the array
+        var totalStudents = gradeProfile.length;
+
+        //student name
+        var studentProfile;
 
 
 
+        //move to html side
+        document.write("Number of Students: " + totalStudents + br + br);
+
+        //loop through the array
+        for (i = 0; i < gradeProfile.length; i++) {
+
+            //seperates to name and grade
+            studentProfile = gradeProfile[i].split("|");
+            //1st letter UPPERCASE
+
+            studentProfile[0] = studentProfile[0].toUpperCase().slice(1);
+
+
+            //put on html side
+            document.write(studentProfile[0] + ". . . . ");
+            document.write(studentProfile[1] + br);
+
+
+        }
     </script>
 
 
 
 </body>
+
 
 </html>

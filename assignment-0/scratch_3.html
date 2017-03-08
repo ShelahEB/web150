@@ -65,3 +65,137 @@ grades = grades.sort();
     }
     }
     document.write("lowest score: " + lowest + "<br>");
+
+
+
+
+
+
+
+<!--3:40 am-->
+
+
+
+        /*
+                var profile = grades.split(","); //array of name | grade, alphabetized
+                document.write(profile.sort() + br + br); //test check
+
+                var totalStudents = profile.length; //list the  # of students
+                document.write("Total of Students: " + totalStudents); //test check
+                var studentProfile;
+                for (i = 0; i < profile.lenght; i++) {
+                    studentProfile = profile[i].split("|"); //maybe deleted
+                    studentProfile[0] = studentProfile[0][0].toUpperCase() + studentProfile[0].slice(1); //1st letter upercase
+
+                    document.write(studentProfile[0] + "--"); //lists names
+                    document.write(studentProfile[1] + "<br>"); // list of grades
+                }*/
+
+
+
+
+
+
+
+
+
+
+
+
+<!--5:05 am-->
+
+            //makes string into number
+            gradeScore = Number(studentProfile[1]);
+
+            //add total grades
+            total += gradeScore;
+            min = Math.min(min, gradeScore);
+            max = Math.max(max, gradeScore);
+
+            average = total / totalStudents;
+
+
+
+
+Working well <!--
+-->
+<! DOCTYPE html>
+
+<html>
+
+<head>
+    <title> HW 3 | Making the Grade | Array & Loops</title>
+</head>
+
+<body>
+    <h2>Making the Grade</h2>
+    <h5>HW Prompt:</h5>
+    <ol>
+        <li>Display student name and score in alphabetical order</li>
+        <li>First Letter of student should be capitalized</li>
+        <li>Display lowest, highest and average scores</li>
+    </ol>
+
+
+
+    <br>
+    <br>
+
+
+    <script>
+        //given grades
+        var grades = " jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
+
+        //page break
+        var br = ("<br>");
+
+        //creates string array name| grade
+        var gradeProfile = grades.split(',');
+
+        //sort grades
+        gradeProfile.sort();
+
+
+        //numebr of students in the array
+        var totalStudents = gradeProfile.length;
+
+        //student name
+        var studentProfile;
+
+        //GRADES
+        var gradeScore = 0;
+        var total = 0;
+        var max = 0;
+        var min = 0;
+        var avg = 0;
+
+        //move to html side
+         document.write("Number of Students: " + totalStudents + br + br);
+
+        //loop through the array for name
+        for (i = 0; i < gradeProfile.length; i++) {
+
+            //seperates to name and grade
+            studentProfile = gradeProfile[i].split("|");
+            //1st letter UPPERCASE
+            studentProfile[0] = studentProfile[0].toUpperCase() .slice(1);
+
+            //put on html side
+            document.write(studentProfile[0] + ". . . . ");
+            document.write(studentProfile[1] + br + br);
+
+        }
+
+        // put on html side
+
+        document.write("Lowest grade: " + min + br);
+        document.write("Highest grade: " + max + br);
+        document.write("Average grade: " + avg + br);
+    </script>
+
+
+
+</body>
+
+
+</html>
