@@ -22,6 +22,7 @@
 
 
     <script>
+
         //given grades
         var grades = " jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
 
@@ -34,16 +35,14 @@
         //sort grades
         gradeProfile.sort();
 
-
         //numebr of students in the array
         var totalStudents = gradeProfile.length;
 
         //student name
         var studentProfile;
 
-
-
         //move to html side
+        //total # of students
         document.write("Number of Students: " + totalStudents + br + br);
 
         //loop through the array
@@ -51,17 +50,25 @@
 
             //seperates to name and grade
             studentProfile = gradeProfile[i].split("|");
-            //1st letter UPPERCASE
 
+            //1st letter UPPERCASE -broken
             studentProfile[0] = studentProfile[0].toUpperCase().slice(1);
 
-
             //put on html side
+            //              //name
             document.write(studentProfile[0] + ". . . . ");
+                            //grades
             document.write(studentProfile[1] + br);
 
 
+
+
+
         }
+
+
+
+
     </script>
 
 
